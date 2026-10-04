@@ -1,0 +1,23 @@
+version: 3
+projects:
+  - name: networking-staging
+    dir: terraform/networking
+    workspace: staging
+    terraform_version: v1.16.5
+    autoplan:
+      enabled: true
+      when_modified: ["*.tf", "*.tfvars"]
+  - name: networking-production
+    dir: terraform/networking
+    workspace: production
+    terraform_version: v1.16.5
+    autoplan:
+      enabled: true
+      when_modified: ["*.tf", "*.tfvars"]
+  - name: storage-production
+    dir: terraform/storage
+    workspace: production
+    terraform_version: v1.16.5
+    autoplan:
+      enabled: true
+      when_modified: ["*.tf", "*.tfvars"]
