@@ -4,7 +4,7 @@ terraform {
 
 variable "revision" {
   type    = string
-  default = "first-pr"
+  default = "first-pr-2"
 }
 
 variable "fail_plan" {
